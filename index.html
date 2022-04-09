@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Slot Machine</title>
+  </head>
+
+  <body>
+    <img class="bg" src="assets/bg2.png" />
+    <div class="header">
+      <img class="fruitSpinImg" src="assets/fruitSpin.png" />
+    </div>
+
+    <div class="slotsContainer">
+      <img class="slotsContainer image1" src="assets/slot2.png" />
+
+      <table class="centerTable" id="slotsTable">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="uiBtns">
+      <div class="spinBtn btnWidths">
+        <button id="spinBtn" role="button" class="button-42" onclick="onSpin()">
+          Spin
+        </button>
+      </div>
+      <div class="addLineBtn btnWidths">
+        <button rol Add Linee="button" class="button-42" onclick="onAddLine()">
+          Add Line
+        </button>
+      </div>
+      <div class="maxBetBtn btnWidths">
+        <button role="button" class="button-42" onclick="onMaxBetBtn()">
+          Max Bet
+        </button>
+      </div>
+    </div>
+
+    <div class="btnDisplay">
+      <div class="result btnWidths" id="coinBal"></div>
+      <div class="result btnWidths" id="numPayline"></div>
+      <div class="result btnWidths" id="winnings"></div>
+    </div>
+
+    <div id="balError">Not enough coins</div>
+  </body>
+  <script src="scriptv2.js"></script>
+  <div class="playSound">
+    <input
+      class="button-42"
+      type="button"
+      value="Play ambient casino music"
+      onclick="play()"
+    />
+    <audio id="audio" src="assets/casinoSoundsBg.mp3"></audio>
+  </div>
+</html>
